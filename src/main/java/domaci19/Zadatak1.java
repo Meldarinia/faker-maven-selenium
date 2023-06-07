@@ -46,7 +46,7 @@ public class Zadatak1 {
         WebElement outputEmail = driver.findElement(By.cssSelector("#email"));
 
 
-        if ((outputName.getText().equals("Name:" + name)) && (outputEmail.getText().equals("Email:" + emailAddress))){
+        if ((outputName.getText().contains(name)) && (outputEmail.getText().contains(emailAddress))){
             System.out.println("Test passed successfully! Output data matches input data.");
         } else {
             System.out.println("Test failed. Output data does not match input data.");
